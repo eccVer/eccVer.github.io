@@ -1,0 +1,39 @@
+<html> 
+<head>
+	<link rel="stylesheet" type="text/css" href="mystyle.css">
+</head>
+
+
+  <body>
+  	<div class="content">
+
+  	<h1> Secp256k1 Signature Verifier </h1>
+  	<br>
+
+  	Public key:<br>
+    <textarea id="publicTextbox" rows="4" cols="60"></textarea>
+    <br><br>
+    Message: <input type="text" id="msgTextbox" size="10"><br>
+    <br>
+    Signature: <input type="text" id="sigTextbox" size="70"><br>
+
+    <br>
+	<button id="verifyButton" class="button" onclick="verify()">Verify</button>
+	<span id="resultText"></span>
+
+	<br><br><br>
+	<p>
+		<b>Notes: </b><br>
+		Public key must be uncompressed ('04' + hex string) <br>
+		Message is hashed with sha256 before signing <br>
+		Signature format: DER-encoded as hex-string <br>
+		
+	</p>
+	
+
+	<script src="./bundle.js" charset="utf-8" >
+  	</script>
+
+    </div>
+  </body>  
+</html>
